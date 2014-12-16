@@ -51,8 +51,7 @@ public class LoginBean {
             context.addMessage(null, new FacesMessage("Login failed."));
             return "login";
         }
-        //return "/user/home";
-        return "";
+        return "/user/home";
     }
 
     public String logout() {
@@ -63,8 +62,7 @@ public class LoginBean {
         } catch (ServletException e) {
             context.addMessage(null, new FacesMessage("Logout failed."));
         }
-        //return "/index?faces-redirect=true";
-        return "";
+        return "/index?faces-redirect=true";
     }
 }
 
