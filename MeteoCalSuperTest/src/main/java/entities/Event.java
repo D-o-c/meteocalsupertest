@@ -16,7 +16,7 @@ import javax.persistence.Id;
  * @author doc
  */
 @Entity
-public class NewEntity implements Serializable {
+public class Event implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,10 +40,10 @@ public class NewEntity implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof NewEntity)) {
+        if (!(object instanceof Event)) {
             return false;
         }
-        NewEntity other = (NewEntity) object;
+        Event other = (Event) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -52,7 +52,7 @@ public class NewEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.NewEntity[ id=" + id + " ]";
+        return "entities.Event[ id=" + id + " ]";
     }
     
 }
