@@ -24,19 +24,19 @@ and open the template in the editor.
                         <p:ajax update="namemsg"/>
                     </p:inputText>
                     <p:message id="namemsg" for="name" />
-                    
+
                     <h:outputLabel for="surname">Surname:</h:outputLabel>
                     <p:inputText id="surname" value="#{registrationBean.user.surname}" >
                         <p:ajax update="surnamemsg"/>
                     </p:inputText>
                     <p:message id="surnamemsg" for="surname" />
-                    
+
                     <h:outputLabel for="email">Email:</h:outputLabel>
                     <p:inputText id="email" value="#{registrationBean.user.email}" >
                         <p:ajax update="emailmsg"/>
                     </p:inputText>
                     <p:message id="emailmsg" for="email" />
-                    
+
                     <h:outputLabel for="password">Password:</h:outputLabel>
                     <p:password id="password" value="#{registrationBean.user.password}"
                                 feedback="true" match="pwd2" label="Password"/>
@@ -50,6 +50,6 @@ and open the template in the editor.
 
             </p:panel>
         </h:form>
-
+        
     </h:body>
 </html>
