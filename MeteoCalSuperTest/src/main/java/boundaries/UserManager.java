@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import entities.User;
+import javax.persistence.EntityExistsException;
 
 
 /**
@@ -27,7 +28,12 @@ public class UserManager {
     Principal principal;
 
     public void save(User user) {
-        em.persist(user);
+        if (em.find(User.class, user.getEmail())==null){
+            em.persist(user);
+        }
+        else{
+            throw new IllegalArgumentException();
+        }
     }
 
     public void unregister() {
@@ -36,5 +42,12 @@ public class UserManager {
 
     public User getLoggedUser() {
         return em.find(User.class, principal.getName());
+    }
+    
+    public boolean checkExist(String email){
+        
+        
+        
+        return false;
     }
 }

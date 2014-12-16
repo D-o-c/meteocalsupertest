@@ -10,6 +10,7 @@ import entities.User;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import javax.persistence.EntityExistsException;
 
 /**
  *
@@ -39,7 +40,12 @@ public class RegistrationBean {
     }
 
     public String register() {
-        um.save(user);
+        try{
+            um.save(user);
+        }
+        catch(IllegalArgumentException e){
+           return "sticazzi";
+        }
         //return "user/home?faces-redirect=true";
         return "";
     }
