@@ -52,5 +52,20 @@ and open the template in the editor.
             </p:panel>
         </h:form>
         
+        <h:form id = "loginForm">
+            <p:panel header="Login Form">
+                <p:panelGrid columns="2">
+                    <p:outputLabel for="emailInput" value="Email"/>
+                    <p:inputText id="emailInput" value="#{loginBean.email}" 
+                                 required="true" />
+                    <p:outputLabel for="passwordInput" value="Password"/>
+                    <p:password id="passwordInput" value="#{loginBean.password}" 
+                                required="true" />
+                    <p:commandButton value="Login" 
+                                     action="#{loginBean.login()}" />
+                </p:panelGrid>
+            </p:panel>
+        </h:form>
+        
     </h:body>
 </html>

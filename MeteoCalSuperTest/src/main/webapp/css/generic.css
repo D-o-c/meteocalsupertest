@@ -10,9 +10,20 @@ body {
     font-weight : bold;
     text-align : center;
     margin : 0px;
+    padding: 20px 0px 20px 0px;
+    text-shadow: #FFFFFF 1px 1px 1px;
 }
 
 #registrationForm {
     width : 50%;
     min-width : 347px;
+    float : left;
+    margin-left : 5%;
+}
+
+#loginForm {
+    float: right;
+    width: 30%;
+    margin-right: 5%;
+    min-width: 393px;
 }
