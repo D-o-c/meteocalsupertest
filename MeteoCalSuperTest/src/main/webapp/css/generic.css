@@ -1,0 +1,17 @@
+body {
+    font-family : Arial, sans-serif;
+}
+
+.title {
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size : 48px;
+    font-weight : bold;
+    text-align : center;
+}
+
+#registrationForm {
+    width : 50%;
+    min-width : 347px;
+}
